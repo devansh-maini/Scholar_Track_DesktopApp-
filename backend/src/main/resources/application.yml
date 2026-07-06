@@ -1,0 +1,19 @@
+server:
+  port: ${PORT:8080}
+spring:
+  datasource:
+    # Default: embedded file DB (zero setup). Production: set DATABASE_URL to a jdbc:postgresql://... URL.
+    url: ${DATABASE_URL:jdbc:h2:file:./data/scholartrack;MODE=PostgreSQL;AUTO_SERVER=TRUE}
+    username: ${DATABASE_USERNAME:sa}
+    password: ${DATABASE_PASSWORD:}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none        # schema is owned by Flyway migrations
+  flyway:
+    enabled: true
+scholartrack:
+  jwt:
+    secret: ${JWT_SECRET:dev-only-secret-change-me-dev-only-secret-change-me}
+    expiry-minutes: 480
+  seed-demo: ${SEED_DEMO:true}

@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { color-scheme: light; }
+  html.dark { color-scheme: dark; }
+  body { @apply bg-slate-50 font-sans text-slate-700 antialiased; }
+  html.dark body { @apply bg-ink-900 text-slate-300; }
+  ::selection { background: rgba(16,165,149,.28); }
+  * { scrollbar-width: thin; scrollbar-color: rgba(148,163,184,.45) transparent; }
+  *::-webkit-scrollbar { width: 9px; height: 9px; }
+  *::-webkit-scrollbar-thumb { background: rgba(148,163,184,.4); border-radius: 9px; }
+}
+
+@layer components {
+  .skeleton { @apply relative overflow-hidden rounded-lg bg-slate-200/70 dark:bg-white/5; }
+  .skeleton::after { content: ''; position: absolute; inset: 0; transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.55), transparent); animation: shimmer 1.4s infinite; }
+  html.dark .skeleton::after { background: linear-gradient(90deg, transparent, rgba(255,255,255,.07), transparent); }
+  .input { @apply w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-800 shadow-sm outline-none transition
+    placeholder:text-slate-400 focus:border-brand-500 focus:shadow-glow dark:border-white/10 dark:bg-white/5 dark:text-slate-100 dark:placeholder:text-slate-500; }
+}
