@@ -1,0 +1,11 @@
+node_modules/
+target/
+data/
+.env
+*.iml
+.idea/
+.DS_Store
+*.lock.db
+*.mv.db
+_stage/
+scripts/
