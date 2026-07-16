@@ -71,7 +71,8 @@ public class AcademicController {
     @GetMapping("/hod/assignments")
     public ApiResponse<List<AssignmentDto>> assignments() { return ApiResponse.ok("Assignments", svc.listAssignments()); }
 
-    // ---------- Student: own data ----------
+    // ---------- Student: own data (profile and subjects) ----------
+    // Retrieves all subjects and assigned teachers for current student's class group
     @GetMapping("/students/me") @PreAuthorize("hasRole('STUDENT')")
     public ApiResponse<StudentDto> studentMe(Principal p) { return ApiResponse.ok("My profile", svc.studentMe(p.getName())); }
 
