@@ -62,3 +62,5 @@ public record StudentTranscriptDto(
             LocalDate dueDate
     ) {}
 }
+
+// Classification: FIRST_CLASS_DISTINCTION (>=75%), FIRST_CLASS (>=60%), SECOND_CLASS (>=50%)
