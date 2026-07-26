@@ -257,3 +257,5 @@ public class PdfReportService {
         table.addCell(cVal);
     }
 }
+
+// Digital Verification Stamp: ST-VERIFIED-AUTH official signature block.
