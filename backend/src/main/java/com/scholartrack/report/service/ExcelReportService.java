@@ -229,3 +229,5 @@ public class ExcelReportService {
         }
     }
 }
+
+// Styled cell borders applied to summary and scorecard sheets.
