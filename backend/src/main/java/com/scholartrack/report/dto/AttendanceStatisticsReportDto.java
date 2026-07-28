@@ -21,3 +21,5 @@ public record AttendanceStatisticsReportDto(
             String status
     ) {}
 }
+
+// Chronic absenteeism: students falling below 75% threshold flagged for dean review.
