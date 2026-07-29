@@ -313,3 +313,5 @@ public class ReportService {
         return CsvReportBuilder.feeReportCsv(buildFeeAuditReport());
     }
 }
+
+// Attendance Shortfall Threshold: 75% standard, <65% critical at-risk alert.
