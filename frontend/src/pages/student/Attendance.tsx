@@ -7,7 +7,8 @@ export default function Attendance() {
   const q = useAttendance();
   return (
     <div>
-      <PageHeader title="Attendance" subtitle="Your attendance record, subject by subject." />
+      <PageHeader title="Attendance" subtitle="Your attendance record, subject by subject. Minimum requirement is 75%." />
+      {q.data?.lowAttendance && <div className="mb-4 rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">Low Attendance Warning: Your overall attendance is below 75%.</div>}
       <Async query={q} skeleton={<Skeleton className="h-64" />}>
         {(a) => a.total === 0 ? <EmptyState icon={CalendarCheck} title="No attendance recorded yet" text="Once teachers mark attendance it will show up here." /> : (
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
