@@ -18,6 +18,7 @@ export default function Attendance() {
                 <p className="font-semibold">{s.subjectName}</p>
                 <Progress value={s.percent} tone={attendanceTone(s.percent)} className="mt-4" />
                 <p className="mt-2 text-sm text-slate-500">{s.attended}/{s.total} classes ({pct(s.percent, 0)})</p>
+                {s.classesNeededFor75 > 0 && <span className="inline-block mt-2 rounded-full bg-amber-100 px-2.5 py-0.5 text-xs text-amber-800">attend {s.classesNeededFor75} more for 75%</span>}
               </Card>
             ))}
           </div>
