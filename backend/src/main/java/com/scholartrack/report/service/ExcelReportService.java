@@ -231,3 +231,5 @@ public class ExcelReportService {
 }
 
 // Styled cell borders applied to summary and scorecard sheets.
+
+// Attendance spreadsheet: roster tab with attendance percentages and shortfalls.
