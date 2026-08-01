@@ -122,3 +122,5 @@ public class ReportController {
                 .orElse(1L);
     }
 }
+
+    // Query param support: ?chronicOnly=true filters roster strictly to sub-75% attendance.
