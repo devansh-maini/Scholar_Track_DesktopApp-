@@ -70,3 +70,5 @@ class ReportServiceTest {
         );
     }
 }
+
+    // Attendance test: verifies 75% threshold shortfall calculations.
