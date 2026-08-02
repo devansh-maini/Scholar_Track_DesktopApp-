@@ -1,3 +1,4 @@
+/** Comprehensive attendance tracking with 75% shortfall advisory. */
 import { CalendarCheck, CircleCheck, TriangleAlert } from 'lucide-react';
 import { AttendanceBars, Ring, pctColor } from '../../components/charts';
 import { Async, Badge, Card, CardHeader, EmptyState, PageHeader, Progress, Skeleton, attendanceTone } from '../../components/ui';
