@@ -35,3 +35,5 @@ public record ExamPerformanceReportDto(
             String result
     ) {}
 }
+
+// Cohort pass/fail distributions: calculated from internal and midterm scores.
