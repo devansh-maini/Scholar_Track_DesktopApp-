@@ -37,3 +37,5 @@ public record ExamPerformanceReportDto(
 }
 
 // Cohort pass/fail distributions: calculated from internal and midterm scores.
+
+// Grade buckets: O (>=90), A+ (>=80), A (>=70), B+ (>=60), B (>=50), C (>=45), P (>=40), F (<40).
