@@ -261,3 +261,5 @@ public class PdfReportService {
 // Digital Verification Stamp: ST-VERIFIED-AUTH official signature block.
 
 // Attendance roster PDF formatting: student list, class ratios, and compliance pill.
+
+// Exam PDF layout: subject score breakdown, pass rate progress bar, and grade curve.
