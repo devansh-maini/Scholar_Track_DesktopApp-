@@ -143,3 +143,5 @@ public final class CsvReportBuilder {
         return sb.toString();
     }
 }
+
+    // Exam CSV: exports student assessment scores with formula injection sanitization.
