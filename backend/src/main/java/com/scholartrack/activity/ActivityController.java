@@ -67,6 +67,7 @@ public class ActivityController {
     @GetMapping("/students/me/attendance") @PreAuthorize("hasRole('STUDENT')")
     public ApiResponse<AttendanceSummaryDto> myAttendance(Principal p) { return ApiResponse.ok("My attendance", svc.myAttendance(p.getName())); }
 
+    /** Get marks breakdown for student across all enrolled subjects */
     @GetMapping("/students/me/marks") @PreAuthorize("hasRole('STUDENT')")
     public ApiResponse<List<MarkDto>> myMarks(Principal p) { return ApiResponse.ok("My marks", svc.myMarks(p.getName())); }
 
