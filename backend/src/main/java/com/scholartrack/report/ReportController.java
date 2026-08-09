@@ -124,3 +124,5 @@ public class ReportController {
 }
 
     // Query param support: ?chronicOnly=true filters roster strictly to sub-75% attendance.
+
+    // GET /api/v1/reports/marks: returns subject marks performance and pass/fail distributions.
