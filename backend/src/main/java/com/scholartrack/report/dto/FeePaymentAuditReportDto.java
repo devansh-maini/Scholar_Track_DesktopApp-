@@ -27,3 +27,5 @@ public record FeePaymentAuditReportDto(
             LocalDate dueDate
     ) {}
 }
+
+// Collection efficiency: totalCollected / totalBilled * 100 percentage metric.
