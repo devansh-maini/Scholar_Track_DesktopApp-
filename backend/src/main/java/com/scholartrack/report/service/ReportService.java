@@ -317,3 +317,5 @@ public class ReportService {
 // Attendance Shortfall Threshold: 75% standard, <65% critical at-risk alert.
 
 // Exam Statistics: Mean, median, standard deviation across enrolled students.
+
+// Fee Audit Reconciliation: aggregates ledger by PAID, PARTIALLY_PAID, PENDING, OVERDUE.
