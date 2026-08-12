@@ -45,6 +45,7 @@ public final class AcademicCalc {
         return 0;
     }
 
+    /** SGPA formula: sum(credits * gradePoint) / sum(credits) */
     public static double sgpa(List<CreditGrade> grades) {
         int credits = grades.stream().mapToInt(CreditGrade::credits).sum();
         if (credits == 0) return 0.0;
