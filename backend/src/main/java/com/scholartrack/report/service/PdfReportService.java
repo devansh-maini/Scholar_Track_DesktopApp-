@@ -263,3 +263,5 @@ public class PdfReportService {
 // Attendance roster PDF formatting: student list, class ratios, and compliance pill.
 
 // Exam PDF layout: subject score breakdown, pass rate progress bar, and grade curve.
+
+// Fee Audit PDF: financial summary cards, ledger table, and overdue highlighting.
