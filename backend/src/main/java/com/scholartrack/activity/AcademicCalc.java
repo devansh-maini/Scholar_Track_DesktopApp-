@@ -53,6 +53,7 @@ public final class AcademicCalc {
         return round2(points / credits);
     }
 
+    /** CGPA formula: credit-weighted average across all semesters */
     public static double cgpa(List<SemesterScore> semesters) {
         int credits = semesters.stream().mapToInt(SemesterScore::credits).sum();
         if (credits == 0) return 0.0;
