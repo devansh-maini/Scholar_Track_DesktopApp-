@@ -235,3 +235,5 @@ public class ExcelReportService {
 // Attendance spreadsheet: roster tab with attendance percentages and shortfalls.
 
 // Exam Excel: statistical rows with average, median, and grade frequencies.
+
+// Fee Excel: ledger tab with billed, late fee applied, collected, and outstanding.
