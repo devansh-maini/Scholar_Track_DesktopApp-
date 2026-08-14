@@ -7,6 +7,7 @@ import com.scholartrack.activity.AcademicCalc.SemesterScore;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 
+/** Unit tests verifying SGPA, CGPA, and grade point calculations. */
 class AcademicCalcTest {
     @Test void attendancePercent() {
         assertEquals(0.0, AcademicCalc.attendancePercent(0, 0));
