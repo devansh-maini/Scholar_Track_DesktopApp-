@@ -71,6 +71,7 @@ public class ActivityController {
     @GetMapping("/students/me/marks") @PreAuthorize("hasRole('STUDENT')")
     public ApiResponse<List<MarkDto>> myMarks(Principal p) { return ApiResponse.ok("My marks", svc.myMarks(p.getName())); }
 
+    /** Get current SGPA and cumulative CGPA across all semesters */
     @GetMapping("/students/me/results") @PreAuthorize("hasRole('STUDENT')")
     public ApiResponse<ResultDto> myResults(Principal p) { return ApiResponse.ok("My results", svc.myResults(p.getName())); }
 
