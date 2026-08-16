@@ -74,3 +74,5 @@ class ReportServiceTest {
     // Attendance test: verifies 75% threshold shortfall calculations.
 
     // Exam Analytics Test: verifies pass rate computation and boundary scores.
+
+    // Fee Audit Test: verifies late fee addition and outstanding balance formulas.
