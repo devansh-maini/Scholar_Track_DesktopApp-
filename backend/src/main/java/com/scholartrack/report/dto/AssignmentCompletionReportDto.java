@@ -24,3 +24,5 @@ public record AssignmentCompletionReportDto(
             double completionPercent
     ) {}
 }
+
+// Coursework metrics: total submissions received vs expected per cohort.
