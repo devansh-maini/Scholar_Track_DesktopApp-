@@ -1,12 +1,14 @@
 import { useQuery } from '@tanstack/react-query';
 import { api } from './api';
 import type {
-  AttendanceSummary, StudentDto,
+  AttendanceSummary, MarkDto, ResultDto, StudentDto,
 } from './types';
 
 export const keys = {
-  me: ['me'], attendance: ['attendance'],
+  me: ['me'], attendance: ['attendance'], marks: ['marks'], results: ['results'],
 } as const;
 
 export const useMe = () => useQuery({ queryKey: keys.me, queryFn: () => api.get<StudentDto>('/students/me') });
 export const useAttendance = () => useQuery({ queryKey: keys.attendance, queryFn: () => api.get<AttendanceSummary>('/students/me/attendance') });
+export const useMarks = () => useQuery({ queryKey: keys.marks, queryFn: () => api.get<MarkDto[]>('/students/me/marks') });
+export const useResults = () => useQuery({ queryKey: keys.results, queryFn: () => api.get<ResultDto>('/students/me/results') });
