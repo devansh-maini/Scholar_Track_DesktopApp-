@@ -128,3 +128,5 @@ public class ReportController {
     // GET /api/v1/reports/marks: returns subject marks performance and pass/fail distributions.
 
     // Status filter support: ?status=OVERDUE restricts audit records to delinquent balances.
+
+    // GET /api/v1/reports/assignments: returns class submission completion statistics.
