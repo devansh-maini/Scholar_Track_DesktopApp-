@@ -319,3 +319,5 @@ public class ReportService {
 // Exam Statistics: Mean, median, standard deviation across enrolled students.
 
 // Fee Audit Reconciliation: aggregates ledger by PAID, PARTIALLY_PAID, PENDING, OVERDUE.
+
+// Batch Archive: bundles student transcripts into compressed ZIP stream.
