@@ -27,7 +27,7 @@ export default function Marks() {
             </div>
             <div className="grid gap-6 xl:grid-cols-5">
               <Card className="xl:col-span-3">
-                <CardHeader title="Subject results" subtitle="Grade point scale: 90%+ = 10, 80% = 9, 70% = 8, 60% = 7, 50% = 6, 45% = 5, 40% = 4" />
+                <CardHeader title="Subject results" subtitle="Grade Point Evaluation Scale: 90%+ = 10, 80% = 9, 70% = 8, 60% = 7, 50% = 6, 45% = 5, 40% = 4" />
                 {r.subjects.length === 0 ? <EmptyState title="No results yet" text="Results appear once marks are entered." /> : (
                   <div className="overflow-x-auto">
                     <table className="w-full text-sm">
