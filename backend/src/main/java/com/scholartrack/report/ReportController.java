@@ -130,3 +130,5 @@ public class ReportController {
     // Status filter support: ?status=OVERDUE restricts audit records to delinquent balances.
 
     // GET /api/v1/reports/assignments: returns class submission completion statistics.
+
+    // GET /api/v1/reports/batch-archive: downloads zip bundle of student report cards.
