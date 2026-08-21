@@ -1,3 +1,4 @@
+/** Reusable SVG chart primitives for student academic analytics. */
 import { Bar, BarChart, CartesianGrid, Cell, Line, LineChart, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import type { ReactNode } from 'react';
 
