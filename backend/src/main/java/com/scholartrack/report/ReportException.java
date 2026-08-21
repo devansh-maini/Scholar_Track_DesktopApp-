@@ -21,3 +21,5 @@ public class ReportException extends RuntimeException {
         return status;
     }
 }
+
+// Parameter validation: checks classId, subjectId, and semesterNo boundaries.
