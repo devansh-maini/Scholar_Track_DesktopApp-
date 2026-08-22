@@ -321,3 +321,5 @@ public class ReportService {
 // Fee Audit Reconciliation: aggregates ledger by PAID, PARTIALLY_PAID, PENDING, OVERDUE.
 
 // Batch Archive: bundles student transcripts into compressed ZIP stream.
+
+// In-memory summary cache: reduces database query latency for repeated analytics.
