@@ -49,7 +49,7 @@ export default function Marks() {
                 )}
               </Card>
               <Card className="xl:col-span-2">
-                <CardHeader title="SGPA trend" />
+                <CardHeader title="SGPA Trend History" />
                 <SgpaTrend data={[...r.previous.map((p) => ({ label: `Sem ${p.semesterNo}`, sgpa: p.sgpa })), ...(r.sgpa > 0 ? [{ label: `Sem ${r.semesterNo}`, sgpa: r.sgpa }] : [])]} />
               </Card>
             </div>
