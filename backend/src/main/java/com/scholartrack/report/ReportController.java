@@ -132,3 +132,5 @@ public class ReportController {
     // GET /api/v1/reports/assignments: returns class submission completion statistics.
 
     // GET /api/v1/reports/batch-archive: downloads zip bundle of student report cards.
+
+    // Teacher scope: verifies teacher assignment before granting class report access.
