@@ -1,3 +1,4 @@
+/** Official marks and SGPA/CGPA evaluation analysis. */
 import { Trophy } from 'lucide-react';
 import { SgpaTrend } from '../../components/charts';
 import { Async, Badge, Card, CardHeader, EmptyState, PageHeader, Progress, Skeleton, Stat } from '../../components/ui';
