@@ -134,3 +134,5 @@ public class ReportController {
     // GET /api/v1/reports/batch-archive: downloads zip bundle of student report cards.
 
     // Teacher scope: verifies teacher assignment before granting class report access.
+
+    // RFC 5987: supports UTF-8 filename encoding in Content-Disposition headers.
