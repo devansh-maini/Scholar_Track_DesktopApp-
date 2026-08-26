@@ -13,3 +13,5 @@ public enum ReportFormat {
         };
     }
 }
+
+// MIME Mappings: application/pdf, text/csv, application/vnd.openxmlformats...
