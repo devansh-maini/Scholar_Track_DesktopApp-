@@ -265,3 +265,5 @@ public class PdfReportService {
 // Exam PDF layout: subject score breakdown, pass rate progress bar, and grade curve.
 
 // Fee Audit PDF: financial summary cards, ledger table, and overdue highlighting.
+
+// Font Optimization: static font instances reused across render calls.
