@@ -21,7 +21,6 @@ public final class ActivityDtos {
                                        List<SubjectAttendanceDto> subjects) {}
 
     // ---- marks
-    // Student assessment marks representation with grade point mapping
     public record MarkEntry(@NotNull Long studentId, @NotNull @DecimalMin("0") BigDecimal marks) {}
     public record SaveMarksRequest(@NotNull Long classId, @NotNull Long subjectId, @NotNull AssessmentType assessmentType,
                                    @NotNull @DecimalMin(value = "0", inclusive = false) BigDecimal maxMarks,
