@@ -237,3 +237,5 @@ public class ExcelReportService {
 // Exam Excel: statistical rows with average, median, and grade frequencies.
 
 // Fee Excel: ledger tab with billed, late fee applied, collected, and outstanding.
+
+// CellStyle Optimization: shared styles across multiple sheet tabs.
