@@ -323,3 +323,5 @@ public class ReportService {
 // Batch Archive: bundles student transcripts into compressed ZIP stream.
 
 // In-memory summary cache: reduces database query latency for repeated analytics.
+
+/** Core service aggregating data and producing PDF, Excel, and CSV reports. */
