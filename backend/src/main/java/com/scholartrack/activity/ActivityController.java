@@ -76,6 +76,7 @@ public class ActivityController {
     @GetMapping("/students/me/coursework") @PreAuthorize("hasRole('STUDENT')")
     public ApiResponse<List<MyCourseworkDto>> myCoursework(Principal p) { return ApiResponse.ok("My assignments", svc.myCoursework(p.getName())); }
 
+    /** Submit student solution / attachment for coursework */
     @PostMapping("/students/me/coursework/{id}/submit") @PreAuthorize("hasRole('STUDENT')")
     public ApiResponse<SubmissionDto> submit(@PathVariable Long id, @Valid @RequestBody SubmitRequest r, Principal p) {
         return ApiResponse.ok("Submission saved", svc.submit(p.getName(), id, r));
