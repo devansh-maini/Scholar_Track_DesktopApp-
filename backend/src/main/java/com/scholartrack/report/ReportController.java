@@ -136,3 +136,5 @@ public class ReportController {
     // Teacher scope: verifies teacher assignment before granting class report access.
 
     // RFC 5987: supports UTF-8 filename encoding in Content-Disposition headers.
+
+/** REST Controller exposing official academic report generation endpoints. */
