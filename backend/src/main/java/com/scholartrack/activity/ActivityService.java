@@ -168,7 +168,6 @@ public class ActivityService {
     public AttendanceSummaryDto myAttendance(String username) { return attendanceSummary(studentFor(username)); }
 
     @Transactional(readOnly = true)
-    /** Query all marks recorded for authenticated student, sorted by subject code. */
     public List<MarkDto> myMarks(String username) {
         return marks.findByStudentId(studentFor(username).getId()).stream().map(m -> toDto(m))
                 .sorted(Comparator.comparing(MarkDto::subjectCode).thenComparing(m -> m.assessmentType().name()))
