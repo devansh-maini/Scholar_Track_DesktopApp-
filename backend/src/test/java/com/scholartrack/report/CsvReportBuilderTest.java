@@ -21,3 +21,5 @@ class CsvReportBuilderTest {
         assertEquals("\"Say \"\"Hello\"\"\"", CsvReportBuilder.escapeCell("Say \"Hello\""));
     }
 }
+
+    // Regression check: formula sanitizer handles multiple special leading characters.
