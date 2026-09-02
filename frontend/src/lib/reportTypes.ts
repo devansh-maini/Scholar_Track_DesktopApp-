@@ -148,3 +148,5 @@ export interface FeePaymentAuditReport {
   overdueCount: number;
   fees: FeeAuditRow[];
 }
+
+export type ReportExportFormat = 'pdf' | 'xlsx' | 'csv' | 'json';
