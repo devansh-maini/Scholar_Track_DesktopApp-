@@ -90,7 +90,7 @@ export default function Assignments() {
         footer={<><Button variant="ghost" onClick={() => setTarget(null)}>Cancel</Button>
           <Button icon={Send} loading={submit.isPending} disabled={content.trim().length === 0} onClick={() => submit.mutate()}>Submit</Button></>}>
         <Field label="Link to your work or a short note" hint="Paste a Drive / GitHub link or write a note (max 500 characters).">
-          <textarea className="input min-h-28 resize-y" maxLength={500} value={content} onChange={(e) => setContent(e.target.value)} placeholder="https://..." />
+          <textarea className="input min-h-28 resize-y" maxLength={500} value={content} onChange={(e) => setContent(e.target.value)} placeholder="Paste your answer, repo URL, or notes here..." />
         </Field>
         <p className="mt-2 text-right text-xs text-slate-400">{content.length}/500</p>
       </Modal>
