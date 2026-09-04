@@ -40,3 +40,5 @@ export async function downloadReportFile(endpoint: string, format: 'pdf' | 'csv'
   const sep = endpoint.includes('?') ? '&' : '?';
   return download(`${endpoint}${sep}format=${format}`);
 }
+
+// Format helper: appends format query parameter and delegates to download().
