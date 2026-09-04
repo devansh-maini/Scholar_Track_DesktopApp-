@@ -66,7 +66,7 @@ export default function Assignments() {
                         </div>
                         {c.status === 'EVALUATED' && (
                           <div className="mt-4 rounded-xl bg-emerald-50 p-3 text-sm dark:bg-emerald-500/10">
-                            <p className="flex items-center gap-1.5 font-semibold text-emerald-800 dark:text-emerald-300"><CheckCircle2 className="h-4 w-4" /> Scored {c.marks} / {c.maxMarks}</p>
+                            <p className="flex items-center gap-1.5 font-semibold text-emerald-800 dark:text-emerald-300"><CheckCircle2 className="h-4 w-4" /> Evaluation Score: {c.marks} / {c.maxMarks}</p>
                             {c.feedback && <p className="mt-1 text-emerald-900/80 dark:text-emerald-200/80">“{c.feedback}”</p>}
                           </div>
                         )}
