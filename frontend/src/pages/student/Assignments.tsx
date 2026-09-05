@@ -70,7 +70,7 @@ export default function Assignments() {
                             {c.feedback && <p className="mt-1 text-emerald-900/80 dark:text-emerald-200/80">“{c.feedback}”</p>}
                           </div>
                         )}
-                        {c.submittedAt && c.status !== 'EVALUATED' && <p className="mt-3 text-xs text-slate-500">Submitted {fmtDateTime(c.submittedAt)}. You can resubmit until it is evaluated.</p>}
+                        {c.submittedAt && c.status !== 'EVALUATED' && <p className="mt-3 text-xs text-slate-500">Submitted {fmtDateTime(c.submittedAt)}. You can resubmit until the teacher evaluates it. Submission confirmed.</p>}
                         {c.status !== 'EVALUATED' && (
                           <Button className="mt-4" variant={c.status === 'PENDING' ? 'primary' : 'secondary'} size="sm" icon={Send} onClick={() => { setTarget(c); setContent(''); }}>
                             {c.status === 'PENDING' ? 'Submit work' : 'Resubmit'}
