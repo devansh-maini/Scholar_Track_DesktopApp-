@@ -1,3 +1,4 @@
+/** Student coursework tracking and assignment submission portal. */
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { CheckCircle2, ClipboardList, Clock, Send } from 'lucide-react';
 import { useState } from 'react';
