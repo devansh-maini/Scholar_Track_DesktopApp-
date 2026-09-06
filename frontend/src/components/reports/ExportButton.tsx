@@ -66,3 +66,5 @@ export function ExportButton({ endpoint, formats = ['pdf', 'xlsx', 'csv'] }: Pro
     </div>
   );
 }
+
+// Toast feedback: confirms successful file download or displays error toast.
