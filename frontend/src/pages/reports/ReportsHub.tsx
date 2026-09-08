@@ -95,3 +95,5 @@ export default function ReportsHub() {
     </div>
   );
 }
+
+// Module Cards: Transcripts, Attendance Audit, Department Analytics, Fee Ledgers.
