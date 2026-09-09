@@ -62,3 +62,91 @@ export interface ComplaintDto {
 export interface AiReply { reply: string; at: string }
 export interface HistoryItem { id: number; sender: 'USER' | 'ASSISTANT'; content: string; at: string }
 export interface LiveEvent { type: string; message: string; at: string }
+
+// HOD Module types
+export interface DepartmentStatsDto {
+  id: number;
+  code: string;
+  name: string;
+  totalStudents: number;
+  totalTeachers: number;
+  atRiskStudents: number;
+  avgAttendance: number;
+  avgMarks: number;
+}
+
+export interface DepartmentOverviewDto {
+  hodName: string;
+  totalStudents: number;
+  totalTeachers: number;
+  atRiskStudents: number;
+  avgAttendance: number;
+  avgMarks: number;
+  departments: DepartmentStatsDto[];
+}
+
+export interface SubjectClassDto {
+  subjectId: number;
+  subjectCode: string;
+  subjectName: string;
+  classId: number;
+  className: string;
+}
+
+export interface TeacherAllocationDto {
+  teacherId: number;
+  fullName: string;
+  email: string;
+  employeeCode: string;
+  departmentName: string;
+  allocations: SubjectClassDto[];
+}
+
+export interface SyllabusAuditItemDto {
+  subjectId: number;
+  subjectCode: string;
+  subjectName: string;
+  classId: number;
+  className: string;
+  topicsTotal: number;
+  topicsDone: number;
+  percentComplete: number;
+}
+
+export interface AtRiskStudentDto {
+  studentId: number;
+  fullName: string;
+  rollNo: string;
+  department: string;
+  className: string;
+  attendancePct: number;
+  avgMarks: number;
+  riskLevel: string;
+  reasons: string[];
+}
+
+// AI Module types
+export interface StudyPlanSubject {
+  subjectCode: string;
+  subjectName: string;
+  attendancePct: number;
+  marksPct: number;
+  priority: 'HIGH' | 'MEDIUM' | 'LOW';
+  weeklyHours: number;
+  actions: string[];
+}
+
+export interface StudyPlanDto {
+  studentName: string;
+  rollNo: string;
+  generatedAt: string;
+  subjects: StudyPlanSubject[];
+  generalAdvice: string[];
+}
+
+export interface AiChatReply {
+  reply: string;
+  sessionId: string;
+  at: string;
+}
+
