@@ -97,3 +97,5 @@ export default function ReportsHub() {
 }
 
 // Module Cards: Transcripts, Attendance Audit, Department Analytics, Fee Ledgers.
+
+// Role Badges: indicates permissions for students, faculty, and administrators.
