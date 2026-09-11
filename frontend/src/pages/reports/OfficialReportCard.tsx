@@ -155,3 +155,5 @@ export default function OfficialReportCard() {
     </div>
   );
 }
+
+// Header Branding: Arya College of Engineering & I.T. official mark.
