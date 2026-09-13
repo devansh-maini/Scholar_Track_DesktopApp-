@@ -1,6 +1,6 @@
 import {
-  Bell, CalendarCheck, CheckCheck, ClipboardList, GraduationCap, LayoutDashboard, LifeBuoy, ListChecks, LogOut,
-  Megaphone, Moon, Settings as SettingsIcon, Sun, Trophy, UserRound, Wallet, Wifi, WifiOff, type LucideIcon,
+  AlertTriangle, Bell, CalendarCheck, CheckCheck, ClipboardList, GraduationCap, LayoutDashboard, LifeBuoy, ListChecks, LogOut,
+  Megaphone, Moon, Settings as SettingsIcon, Sparkles, Sun, Trophy, UserRound, Users, Wallet, Wifi, WifiOff, type LucideIcon,
 } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
@@ -10,9 +10,9 @@ import { useLive } from '../state/live';
 import { useTheme } from '../state/theme';
 import { Badge, cn } from './ui';
 
-interface NavItem { to: string; label: string; icon: LucideIcon }
+export interface NavItem { to: string; label: string; icon: LucideIcon }
 
-const studentNav: NavItem[] = [
+export const studentNav: NavItem[] = [
   { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { to: '/attendance', label: 'Attendance', icon: CalendarCheck },
   { to: '/marks', label: 'Marks & Results', icon: Trophy },
@@ -21,11 +21,24 @@ const studentNav: NavItem[] = [
   { to: '/notices', label: 'Notices', icon: Megaphone },
   { to: '/syllabus', label: 'Syllabus', icon: ListChecks },
   { to: '/complaints', label: 'Complaints', icon: LifeBuoy },
+  { to: '/ai/assistant', label: 'AI Assistant', icon: Sparkles },
   { to: '/profile', label: 'Profile', icon: UserRound },
   { to: '/settings', label: 'Settings', icon: SettingsIcon },
 ];
 
+export const hodNav: NavItem[] = [
+  { to: '/hod/overview', label: 'Department Overview', icon: LayoutDashboard },
+  { to: '/hod/allocations', label: 'Teacher Allocations', icon: Users },
+  { to: '/hod/syllabus-audit', label: 'Syllabus Audit', icon: ListChecks },
+  { to: '/hod/circulars', label: 'Circulars', icon: Megaphone },
+  { to: '/hod/grievances', label: 'Student Grievances', icon: LifeBuoy },
+  { to: '/hod/at-risk', label: 'At-Risk Diagnostic', icon: AlertTriangle },
+  { to: '/ai/assistant', label: 'AI Assistant', icon: Sparkles },
+  { to: '/settings', label: 'Settings', icon: SettingsIcon },
+];
+
 const roleTone = { STUDENT: 'teal', TEACHER: 'violet', HOD: 'amber' } as const;
+
 
 function LiveStatusPill() {
   const { status } = useLive();
@@ -76,10 +89,11 @@ function NotificationBell() {
   );
 }
 
-export function AppShell({ nav = studentNav }: { nav?: NavItem[] }) {
+export function AppShell({ nav }: { nav?: NavItem[] } = {}) {
   const { user, logout } = useAuth();
   const { dark, toggle } = useTheme();
   if (!user) return null;
+  const effectiveNav = nav || (user.role === 'HOD' ? hodNav : studentNav);
   return (
     <div className="flex h-screen overflow-hidden">
       <aside className="flex w-[264px] shrink-0 flex-col bg-gradient-to-b from-ink-900 via-ink-850 to-ink-900 text-slate-300">
@@ -91,7 +105,7 @@ export function AppShell({ nav = studentNav }: { nav?: NavItem[] }) {
           </div>
         </div>
         <nav className="flex-1 space-y-0.5 overflow-y-auto px-3 py-3">
-          {nav.map(({ to, label, icon: Icon }) => (
+          {effectiveNav.map(({ to, label, icon: Icon }) => (
             <NavLink key={to} to={to}
               className={({ isActive }) => cn('group flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium transition',
                 isActive ? 'bg-brand-500/15 text-white ring-1 ring-brand-400/25' : 'text-slate-400 hover:bg-white/5 hover:text-white')}>
