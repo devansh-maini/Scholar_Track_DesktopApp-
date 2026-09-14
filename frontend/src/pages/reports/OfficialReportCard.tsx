@@ -161,3 +161,5 @@ export default function OfficialReportCard() {
 // Grade Table: credits, percentage, 10-point scale grade point, pass/fail tag.
 
 // Progression Grid: historical SGPA cards across all completed semesters.
+
+// Attendance Clearance: marks eligibility for university end-semester examination.
