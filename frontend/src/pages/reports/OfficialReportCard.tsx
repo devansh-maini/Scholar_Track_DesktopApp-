@@ -163,3 +163,5 @@ export default function OfficialReportCard() {
 // Progression Grid: historical SGPA cards across all completed semesters.
 
 // Attendance Clearance: marks eligibility for university end-semester examination.
+
+// Print Action: triggers browser window.print() with printable media styles.
