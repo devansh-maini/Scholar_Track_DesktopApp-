@@ -121,3 +121,5 @@ export default function AttendanceReport() {
     </div>
   );
 }
+
+// KPI Summary: total roster count, average attendance, and chronic shortfall tally.
