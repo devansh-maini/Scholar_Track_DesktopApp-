@@ -19,7 +19,7 @@ export default function Fees() {
             <div className="grid gap-4 md:grid-cols-3">
               <Stat label="Total billed" value={money(f.totalBilled)} icon={Receipt} tone="slate" hint="Including any late fee" />
               <Stat label="Paid" value={money(f.totalPaid)} icon={CircleDollarSign} tone="green" />
-              <Stat label="Outstanding" value={money(f.totalOutstanding)} icon={Wallet} tone={f.totalOutstanding > 0 ? 'red' : 'green'} hint={f.totalOutstanding > 0 ? 'Please clear outstanding fees before the due date to avoid penalties' : 'You are all clear'} />
+              <Stat label="Outstanding" value={money(f.totalOutstanding)} icon={Wallet} tone={f.totalOutstanding > 0 ? 'red' : 'green'} hint={f.totalOutstanding > 0 ? 'Please clear outstanding fees before the due date to avoid penalties' : 'All fees settled. No outstanding dues.'} />
             </div>
             {f.fees.length === 0 ? <EmptyState icon={Wallet} title="No fees assigned" /> : (
               <div className="grid gap-4 lg:grid-cols-2">
