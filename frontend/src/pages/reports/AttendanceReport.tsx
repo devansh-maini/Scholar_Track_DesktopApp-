@@ -123,3 +123,5 @@ export default function AttendanceReport() {
 }
 
 // KPI Summary: total roster count, average attendance, and chronic shortfall tally.
+
+// Class Selector: filters attendance roster by section A/B cohorts.
