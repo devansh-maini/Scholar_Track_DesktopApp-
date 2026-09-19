@@ -39,7 +39,7 @@ export default function Fees() {
                         <p className="text-sm text-slate-500">of {money(total)}</p>
                       </div>
                       <Progress value={total === 0 ? 100 : (fee.paid / total) * 100} tone={tone[fee.status]} className="mt-3" />
-                      {fee.lateFeeApplied > 0 && <p className="mt-2 text-xs text-red-600">Includes a late fee of {money(fee.lateFeeApplied)}.</p>}
+                      {fee.lateFeeApplied > 0 && <p className="mt-2 text-xs text-red-600">Overdue Notice: Late fee surcharge of {money(fee.lateFeeApplied)}.</p>}
                       {fee.payments.length > 0 && (
                         <div className="mt-4 border-t border-slate-100 pt-3 dark:border-white/5">
                           <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">Payment history</p>
