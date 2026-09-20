@@ -1,3 +1,4 @@
+/** Student fee ledger, transaction records, and online settlement. */
 import { CircleDollarSign, Receipt, Wallet } from 'lucide-react';
 import { Async, Badge, Card, EmptyState, PageHeader, Progress, Skeleton, Stat } from '../../components/ui';
 import type { Tone } from '../../components/ui';
