@@ -119,3 +119,5 @@ export default function ExamAnalyticsReport() {
     </div>
   );
 }
+
+// Department Hero Metrics: passing rate, department average, and honors count.
