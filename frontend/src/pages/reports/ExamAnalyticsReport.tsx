@@ -123,3 +123,5 @@ export default function ExamAnalyticsReport() {
 // Department Hero Metrics: passing rate, department average, and honors count.
 
 // Subject Ranking: displays average marks %, attendance %, and pass rate.
+
+// Student Risk Roster: sorted by risk points descending with status badges.
