@@ -1,12 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 import { api } from './api';
 import type {
-  AttendanceSummary, MarkDto, MyCoursework, MyFees, ResultDto, StudentDto,
+  AttendanceSummary, ComplaintDto, MarkDto, MyCoursework, MyFees, NoticeDto, ResultDto, StudentDto, SyllabusDto,
 } from './types';
 
 export const keys = {
   me: ['me'], attendance: ['attendance'], marks: ['marks'], results: ['results'],
-  coursework: ['coursework'], fees: ['fees'],
+  coursework: ['coursework'], fees: ['fees'], notices: ['notices'], syllabus: ['syllabus'], complaints: ['complaints'],
 } as const;
 
 export const useMe = () => useQuery({ queryKey: keys.me, queryFn: () => api.get<StudentDto>('/students/me') });
@@ -15,3 +15,6 @@ export const useMarks = () => useQuery({ queryKey: keys.marks, queryFn: () => ap
 export const useResults = () => useQuery({ queryKey: keys.results, queryFn: () => api.get<ResultDto>('/students/me/results') });
 export const useCoursework = () => useQuery({ queryKey: keys.coursework, queryFn: () => api.get<MyCoursework[]>('/students/me/coursework') });
 export const useFees = () => useQuery({ queryKey: keys.fees, queryFn: () => api.get<MyFees>('/students/me/fees') });
+export const useNotices = () => useQuery({ queryKey: keys.notices, queryFn: () => api.get<NoticeDto[]>('/notices') });
+export const useSyllabus = () => useQuery({ queryKey: keys.syllabus, queryFn: () => api.get<SyllabusDto[]>('/students/me/syllabus') });
+export const useComplaints = () => useQuery({ queryKey: keys.complaints, queryFn: () => api.get<ComplaintDto[]>('/complaints') });
