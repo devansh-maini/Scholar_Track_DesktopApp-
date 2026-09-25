@@ -119,3 +119,5 @@ export default function FeeAuditReport() {
     </div>
   );
 }
+
+// Financial Summary: billed, collected, late fees, and overdue balance.
