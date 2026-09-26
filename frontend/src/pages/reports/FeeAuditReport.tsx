@@ -121,3 +121,5 @@ export default function FeeAuditReport() {
 }
 
 // Financial Summary: billed, collected, late fees, and overdue balance.
+
+// Status Tabs: filter ledger entries by payment completion states.
