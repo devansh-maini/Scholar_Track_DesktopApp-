@@ -1,5 +1,5 @@
 import {
-  Bell, CalendarCheck, CheckCheck, ClipboardList, GraduationCap, LayoutDashboard, LifeBuoy, ListChecks, LogOut,
+  Bell, FileSpreadsheet, CalendarCheck, CheckCheck, ClipboardList, GraduationCap, LayoutDashboard, LifeBuoy, ListChecks, LogOut,
   Megaphone, Moon, Settings as SettingsIcon, Sun, Trophy, UserRound, Wallet, Wifi, WifiOff, type LucideIcon,
 } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
@@ -18,6 +18,7 @@ const studentNav: NavItem[] = [
   { to: '/marks', label: 'Marks & Results', icon: Trophy },
   { to: '/assignments', label: 'Assignments', icon: ClipboardList },
   { to: '/fees', label: 'Fees', icon: Wallet },
+  { to: '/reports', label: 'Reports & Analytics', icon: FileSpreadsheet },
   { to: '/notices', label: 'Notices', icon: Megaphone },
   { to: '/syllabus', label: 'Syllabus', icon: ListChecks },
   { to: '/complaints', label: 'Complaints', icon: LifeBuoy },
