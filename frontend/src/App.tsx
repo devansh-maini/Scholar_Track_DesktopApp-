@@ -1,3 +1,8 @@
+import ReportsHub from './pages/reports/ReportsHub';
+import OfficialReportCard from './pages/reports/OfficialReportCard';
+import AttendanceReport from './pages/reports/AttendanceReport';
+import ExamAnalyticsReport from './pages/reports/ExamAnalyticsReport';
+import FeeAuditReport from './pages/reports/FeeAuditReport';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { AppShell } from './components/AppShell';
 import { Skeleton } from './components/ui';
@@ -46,6 +51,12 @@ export default function App() {
         <Route path="/complaints" element={<Complaints />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/reports" element={<ReportsHub />} />
+        <Route path="/reports/academic" element={<OfficialReportCard />} />
+        <Route path="/reports/attendance" element={<AttendanceReport />} />
+        <Route path="/reports/performance" element={<ExamAnalyticsReport />} />
+        <Route path="/reports/fees" element={<FeeAuditReport />} />
+
       </Route>
       <Route path="*" element={<Navigate to="/dashboard" replace />} />
     </Routes>
