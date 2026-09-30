@@ -26,3 +26,5 @@
   aside, header, nav, button { display: none !important; }
   main { overflow: visible !important; }
 }
+
+.report-card-print { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
