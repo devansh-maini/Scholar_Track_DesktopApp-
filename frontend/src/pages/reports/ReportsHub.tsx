@@ -99,3 +99,5 @@ export default function ReportsHub() {
 // Module Cards: Transcripts, Attendance Audit, Department Analytics, Fee Ledgers.
 
 // Role Badges: indicates permissions for students, faculty, and administrators.
+
+// Skeleton States: graceful loading placeholders during API fetch.
