@@ -122,3 +122,11 @@ Groq retired llama-3.3-70b-versatile on 2026-08-16; check https://console.groq.c
 If the AI is unreachable the API answers 503 "AI service unavailable. Please try again later." and everything else keeps working.
 
 Smoke test: `powershell -ExecutionPolicy Bypass -File .\scripts\test-m5.ps1`
+
+
+## Academic Reports & Analytics Module (Aviral Joshi)
+Full multi-format report generation (OpenPDF, Apache POI, RFC 4180 CSV):
+- Transcripts: GET /api/v1/reports/student/me (?format=pdf|csv|xlsx)
+- Attendance: GET /api/v1/reports/attendance?classId= (?format=csv)
+- Exam Analytics: GET /api/v1/reports/department (?format=pdf|xlsx)
+- Fee Audit: GET /api/v1/reports/fees (?format=csv)
