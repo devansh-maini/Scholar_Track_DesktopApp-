@@ -82,3 +82,11 @@ cd backend && mvn test
 # Frontend TypeScript verification
 cd frontend && npm run typecheck
 ```
+
+
+### Academic Reports & Performance Analytics (Branch: aviral-academic-reports)
+- Official student transcripts & semester grade cards
+- Class attendance audits & 75% eligibility compliance tracking
+- Departmental exam analytics & pass/fail distributions
+- Fee collection ledger audits and overdue reconciliations
+- OpenPDF, Excel, and CSV multi-format export engines
