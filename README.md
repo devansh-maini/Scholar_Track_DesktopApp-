@@ -90,3 +90,5 @@ cd frontend && npm run typecheck
 - Departmental exam analytics & pass/fail distributions
 - Fee collection ledger audits and overdue reconciliations
 - OpenPDF, Excel, and CSV multi-format export engines
+
+<!-- Release completed: 2026-10-06 -->
