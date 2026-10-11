@@ -1,7 +1,7 @@
 const KEY = 'st.serverUrl';
 
 /** Default backend address. For the cloud build set VITE_API_URL (e.g. https://scholartrack.onrender.com). */
-export const DEFAULT_SERVER: string = import.meta.env.VITE_API_URL ?? 'http://localhost:8080';
+export const DEFAULT_SERVER: string = import.meta.env.VITE_API_URL ?? 'http://localhost:8081';
 export const SHOW_DEMO_ACCOUNTS: boolean = import.meta.env.VITE_SHOW_DEMO !== 'false';
 
 export function normalizeUrl(raw: string): string {

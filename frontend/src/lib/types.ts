@@ -62,3 +62,67 @@ export interface ComplaintDto {
 export interface AiReply { reply: string; at: string }
 export interface HistoryItem { id: number; sender: 'USER' | 'ASSISTANT'; content: string; at: string }
 export interface LiveEvent { type: string; message: string; at: string }
+
+// ---------- Teacher / Faculty types ----------
+export interface TeacherDto {
+  id: number; userId: number; username: string; fullName: string; email: string;
+  employeeCode: string; departmentCode: string;
+}
+
+export interface AssignmentDto {
+  id: number; teacherId: number; teacherName: string; subjectId: number; subjectCode: string;
+  subjectName: string; classId: number; className: string;
+}
+
+export type AttendanceStatus = 'PRESENT' | 'ABSENT' | 'LATE' | 'EXCUSED';
+
+export interface AttendanceRowDto {
+  studentId: number; rollNo: string; fullName: string; status: AttendanceStatus;
+}
+
+export interface AttendanceEntry {
+  studentId: number; status: AttendanceStatus;
+}
+
+export interface MarkAttendanceRequest {
+  classId: number; subjectId: number; date: string; records: AttendanceEntry[];
+}
+
+export interface MarkEntry {
+  studentId: number; marks: number;
+}
+
+export interface SaveMarksRequest {
+  classId: number; subjectId: number; assessmentType: AssessmentType; maxMarks: number; entries: MarkEntry[];
+}
+
+export interface CourseworkDto {
+  id: number; subjectId: number; subjectCode: string; subjectName: string; classId: number; className: string;
+  title: string; description: string | null; deadline: string; maxMarks: number; submissionCount: number;
+}
+
+export interface CreateCourseworkRequest {
+  classId: number; subjectId: number; title: string; description?: string; deadline: string; maxMarks: number;
+}
+
+export interface SubmissionDto {
+  id: number; courseworkId: number; studentId: number; rollNo: string; studentName: string; content: string;
+  status: 'SUBMITTED' | 'LATE' | 'EVALUATED'; submittedAt: string; marks: number | null; feedback: string | null;
+}
+
+export interface EvaluateRequest {
+  marks: number; feedback?: string;
+}
+
+export interface AddTopicRequest {
+  unitNo: number; title: string;
+}
+
+export type NoticePriority = Priority;
+export type NoticeTarget = 'ALL' | 'DEPARTMENT' | 'CLASS';
+
+export interface CreateNoticeRequest {
+  title: string; description: string; priority: Priority; targetType: NoticeTarget;
+  targetId?: number | null; expiryDate?: string | null;
+}
+

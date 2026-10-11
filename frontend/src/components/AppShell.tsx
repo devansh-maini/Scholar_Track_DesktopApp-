@@ -10,9 +10,9 @@ import { useLive } from '../state/live';
 import { useTheme } from '../state/theme';
 import { Badge, cn } from './ui';
 
-interface NavItem { to: string; label: string; icon: LucideIcon }
+export interface NavItem { to: string; label: string; icon: LucideIcon }
 
-const studentNav: NavItem[] = [
+export const studentNav: NavItem[] = [
   { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { to: '/attendance', label: 'Attendance', icon: CalendarCheck },
   { to: '/marks', label: 'Marks & Results', icon: Trophy },
@@ -21,6 +21,18 @@ const studentNav: NavItem[] = [
   { to: '/notices', label: 'Notices', icon: Megaphone },
   { to: '/syllabus', label: 'Syllabus', icon: ListChecks },
   { to: '/complaints', label: 'Complaints', icon: LifeBuoy },
+  { to: '/profile', label: 'Profile', icon: UserRound },
+  { to: '/settings', label: 'Settings', icon: SettingsIcon },
+];
+
+export const teacherNav: NavItem[] = [
+  { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
+  { to: '/attendance', label: 'Attendance', icon: CalendarCheck },
+  { to: '/marks', label: 'Marks & Grades', icon: Trophy },
+  { to: '/assignments', label: 'Assignments', icon: ClipboardList },
+  { to: '/syllabus', label: 'Syllabus Progress', icon: ListChecks },
+  { to: '/students', label: 'My Students', icon: GraduationCap },
+  { to: '/notices', label: 'Notices', icon: Megaphone },
   { to: '/profile', label: 'Profile', icon: UserRound },
   { to: '/settings', label: 'Settings', icon: SettingsIcon },
 ];
