@@ -1,0 +1,52 @@
+﻿Student Academic Report
+Ananya Gupta - CSE2301
+Generated,2026-10-10
+Name,Ananya Gupta
+Roll number,CSE2301
+Class,CSE-A
+Semester,5
+SGPA,9.39
+CGPA,8.53
+Overall attendance,97.0% (97/100 classes)
+Academic risk indicator,LOW (10/100)
+
+Attendance by subject
+Subject,Attended,Total,Percent,Classes needed for 75%
+CS501 Analysis of Algorithms,20,20,100.0%,0
+CS502 Database Management Systems,18,20,90.0%,0
+CS503 Operating Systems,20,20,100.0%,0
+CS504 Computer Networks,19,20,95.0%,0
+CS505 Software Engineering,20,20,100.0%,0
+
+Subject results (current semester)
+Subject,Credits,Percentage,Grade point
+CS501 Analysis of Algorithms,4,89.0%,9
+CS502 Database Management Systems,4,90.0%,10
+CS503 Operating Systems,4,87.0%,9
+CS504 Computer Networks,3,90.0%,10
+CS505 Software Engineering,3,89.0%,9
+
+Marks
+Subject,Assessment,Marks,Maximum
+CS501,INTERNAL,17,20
+CS501,MIDTERM,27.5,30
+CS502,INTERNAL,17.5,20
+CS502,MIDTERM,27.5,30
+CS503,INTERNAL,17,20
+CS503,MIDTERM,26.5,30
+CS504,INTERNAL,16.5,20
+CS504,MIDTERM,28.5,30
+CS505,INTERNAL,16.5,20
+CS505,MIDTERM,28,30
+
+Previous semesters
+Semester,SGPA,Credits
+Semester 1,7.87,22
+Semester 2,8.61,22
+Semester 3,8.74,22
+Semester 4,8.19,22
+
+Fees
+Fee,Total,Late fee,Paid,Outstanding,Status,Due date
+Semester 5 Tuition Fee,Rs. 85000.00,Rs. 0.00,Rs. 85000.00,Rs. 0.00,PAID,2026-09-20
+Examination Fee,Rs. 2500.00,Rs. 0.00,Rs. 0.00,Rs. 2500.00,PENDING,2026-11-09

@@ -1,0 +1,17 @@
+﻿Attendance Report
+CSE-A
+Generated,2026-10-10
+Class,CSE-A
+Students,7
+Average attendance,83.7%
+Below 75%,1
+
+Student attendance
+Roll no,Name,Class,Attended,Total,Percent,Status
+CSE2301,Ananya Gupta,CSE-A,97,100,97.0%,OK
+CSE2302,Rohan Mehta,CSE-A,91,100,91.0%,OK
+CSE2303,Priya Sharma,CSE-A,75,100,75.0%,OK
+CSE2304,Karan Singh,CSE-A,88,100,88.0%,OK
+CSE2305,Isha Jain,CSE-A,94,100,94.0%,OK
+CSE2306,Vikram Rathore,CSE-A,63,100,63.0%,LOW
+CSE2307,Neha Agarwal,CSE-A,78,100,78.0%,OK

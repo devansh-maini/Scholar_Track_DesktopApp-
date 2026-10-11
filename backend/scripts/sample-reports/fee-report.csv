@@ -1,0 +1,34 @@
+﻿Fee Report
+Department fee status
+Generated,2026-10-10
+Total billed,Rs. 879500.00
+Collected,Rs. 375150.00
+Outstanding,Rs. 504350.00
+Fees fully paid,3 of 23
+Overdue,2
+
+Fees
+Roll no,Name,Fee,Total,Late fee,Paid,Outstanding,Status,Due date
+CSE2301,Ananya Gupta,Semester 5 Tuition Fee,Rs. 85000.00,Rs. 0.00,Rs. 85000.00,Rs. 0.00,PAID,2026-09-20
+CSE2305,Isha Jain,Semester 5 Tuition Fee,Rs. 85000.00,Rs. 0.00,Rs. 85000.00,Rs. 0.00,PAID,2026-09-20
+CSE2309,Sana Khan,Semester 5 Tuition Fee,Rs. 85000.00,Rs. 0.00,Rs. 85000.00,Rs. 0.00,PAID,2026-09-20
+CSE2304,Karan Singh,Semester 5 Tuition Fee,Rs. 85000.00,Rs. 1500.00,Rs. 0.00,Rs. 86500.00,OVERDUE,2026-10-05
+CSE2308,Aditya Joshi,Semester 5 Tuition Fee,Rs. 85000.00,Rs. 1500.00,Rs. 0.00,Rs. 86500.00,OVERDUE,2026-10-05
+CSE2308,Aditya Joshi,Lab Fee 861230002,Rs. 500.00,Rs. 0.00,Rs. 0.00,Rs. 500.00,PENDING,2026-10-20
+CSE2309,Sana Khan,Lab Fee 861230002,Rs. 500.00,Rs. 0.00,Rs. 0.00,Rs. 500.00,PENDING,2026-10-20
+CSE2310,Manish Yadav,Lab Fee 861230002,Rs. 500.00,Rs. 0.00,Rs. 0.00,Rs. 500.00,PENDING,2026-10-20
+CSE2302,Rohan Mehta,Semester 5 Tuition Fee,Rs. 85000.00,Rs. 0.00,Rs. 40150.00,Rs. 44850.00,PARTIALLY_PAID,2026-10-25
+CSE2306,Vikram Rathore,Semester 5 Tuition Fee,Rs. 85000.00,Rs. 0.00,Rs. 40000.00,Rs. 45000.00,PARTIALLY_PAID,2026-10-25
+CSE2310,Manish Yadav,Semester 5 Tuition Fee,Rs. 85000.00,Rs. 0.00,Rs. 40000.00,Rs. 45000.00,PARTIALLY_PAID,2026-10-25
+CSE2303,Priya Sharma,Semester 5 Tuition Fee,Rs. 85000.00,Rs. 0.00,Rs. 0.00,Rs. 85000.00,PENDING,2026-10-30
+CSE2307,Neha Agarwal,Semester 5 Tuition Fee,Rs. 85000.00,Rs. 0.00,Rs. 0.00,Rs. 85000.00,PENDING,2026-10-30
+CSE2301,Ananya Gupta,Examination Fee,Rs. 2500.00,Rs. 0.00,Rs. 0.00,Rs. 2500.00,PENDING,2026-11-09
+CSE2302,Rohan Mehta,Examination Fee,Rs. 2500.00,Rs. 0.00,Rs. 0.00,Rs. 2500.00,PENDING,2026-11-09
+CSE2303,Priya Sharma,Examination Fee,Rs. 2500.00,Rs. 0.00,Rs. 0.00,Rs. 2500.00,PENDING,2026-11-09
+CSE2304,Karan Singh,Examination Fee,Rs. 2500.00,Rs. 0.00,Rs. 0.00,Rs. 2500.00,PENDING,2026-11-09
+CSE2305,Isha Jain,Examination Fee,Rs. 2500.00,Rs. 0.00,Rs. 0.00,Rs. 2500.00,PENDING,2026-11-09
+CSE2306,Vikram Rathore,Examination Fee,Rs. 2500.00,Rs. 0.00,Rs. 0.00,Rs. 2500.00,PENDING,2026-11-09
+CSE2307,Neha Agarwal,Examination Fee,Rs. 2500.00,Rs. 0.00,Rs. 0.00,Rs. 2500.00,PENDING,2026-11-09
+CSE2308,Aditya Joshi,Examination Fee,Rs. 2500.00,Rs. 0.00,Rs. 0.00,Rs. 2500.00,PENDING,2026-11-09
+CSE2309,Sana Khan,Examination Fee,Rs. 2500.00,Rs. 0.00,Rs. 0.00,Rs. 2500.00,PENDING,2026-11-09
+CSE2310,Manish Yadav,Examination Fee,Rs. 2500.00,Rs. 0.00,Rs. 0.00,Rs. 2500.00,PENDING,2026-11-09
