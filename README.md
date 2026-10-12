@@ -288,9 +288,9 @@ Git and GitHub provide a way to organize the work of the five team members. Each
 
 Suggested branch naming convention:
 
-- `devansh-student-performance` — student academic management and performance monitoring.
-- `aryan-auth-users` — authentication and user management.
-- `akshita-hod-analytics` — HOD, administration, and analytics.
+- `devansh-auth` — student academic management and performance monitoring.
+- `aryan-student` — authentication and user management.
+- `akshita-hod-ai` — HOD, administration, and analytics.
 - `awantika-teacher` — teacher workflows.
 - `aviral-academic-reports` — shared academic data and reports.
 - `main` — integrated project state intended for review and submission.
