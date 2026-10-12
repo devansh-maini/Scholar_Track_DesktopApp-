@@ -297,20 +297,6 @@ Suggested branch naming convention:
 
 These names are conventions, not proof that branches with these exact names exist. The final submission should use the branch names and commit links visible in the actual repository.
 
-### Recommended weekly workflow
-
-1. Identify the specific task or issue to be completed.
-2. Create or switch to the appropriate member branch.
-3. Make changes that correspond to the task and test them locally.
-4. Commit the real work with a clear message describing the change.
-5. Push the branch and preserve the commit history.
-6. Open a pull request or request a review when the change is ready to integrate.
-7. Resolve conflicts and test the combined application, not only the individual module.
-8. Merge the reviewed change into `main` when it is stable.
-9. Record the actual commit, pull request, screenshots, or test results required by the weekly logbook.
-
-Commit history and weekly reports should represent work that was actually performed. Do not manufacture commits, backdate changes, or claim that a feature was completed earlier than it was. If a feature is incomplete, describe its current status accurately and list the remaining work.
-
 ## 12. Setup and Execution Notes
 
 The commands and configuration required to run ScholarTrack depend on the directory structure and scripts in the submitted repository. The checked-in `package.json`, backend build file, application properties, and project-specific setup instructions are the source of truth.
