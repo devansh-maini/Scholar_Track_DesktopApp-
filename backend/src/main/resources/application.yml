@@ -1,0 +1,28 @@
+server:
+  port: ${PORT:8080}
+spring:
+  datasource:
+    # Default: embedded file DB (zero setup). Production: set DATABASE_URL to a jdbc:postgresql://... URL.
+    url: ${DATABASE_URL:jdbc:h2:file:./data/scholartrack;MODE=PostgreSQL;AUTO_SERVER=TRUE}
+    username: ${DATABASE_USERNAME:sa}
+    password: ${DATABASE_PASSWORD:}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none        # schema is owned by Flyway migrations
+  flyway:
+    enabled: true
+scholartrack:
+  jwt:
+    secret: ${JWT_SECRET:}
+    expiry-minutes: 480
+  seed-demo: ${SEED_DEMO:true}
+  ai:
+    # The key stays on the server. Never put it in the desktop app or in Git.
+    groq-api-key: ${GROQ_API_KEY:}
+    base-url: ${GROQ_BASE_URL:https://api.groq.com/openai/v1}
+    # llama-3.3-70b-versatile was shut down on 2026-08-16; openai/gpt-oss-120b is Groq's recommended replacement.
+    model: ${GROQ_MODEL:openai/gpt-oss-120b}
+    fallback-model: ${GROQ_FALLBACK_MODEL:openai/gpt-oss-20b}
+    timeout-seconds: 30
+    max-requests-per-10-min: 20
