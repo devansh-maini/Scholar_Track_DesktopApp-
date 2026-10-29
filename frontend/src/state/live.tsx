@@ -28,7 +28,7 @@ const invalidations: Record<string, readonly (readonly string[])[]> = {
 const titles: Record<string, string> = {
   MARKS_UPDATED: 'Marks updated', ATTENDANCE_UPDATED: 'Attendance updated', ASSIGNMENT_CREATED: 'New assignment',
   SUBMISSION_EVALUATED: 'Assignment evaluated', FEE_UPDATED: 'Fees updated', NOTICE_PUBLISHED: 'New notice',
-  COMPLAINT_UPDATED: 'Complaint update', SYLLABUS_UPDATED: 'Syllabus updated',
+  COMPLAINT_UPDATED: 'Complaint update', SYLLABUS_UPDATED: 'Syllabus updated', SUBMISSION_RECEIVED: 'New submission',
 };
 
 export function LiveProvider({ children }: { children: ReactNode }) {
@@ -40,6 +40,8 @@ export function LiveProvider({ children }: { children: ReactNode }) {
 
   const handle = useCallback((ev: LiveEvent) => {
     (invalidations[ev.type] ?? []).forEach((k) => qc.invalidateQueries({ queryKey: [...k] }));
+    // Teacher ('t') and HOD ('h') screens plus shared lists refresh on any event; only mounted screens actually re-fetch.
+    ['t', 'h', 'notices', 'complaints'].forEach((k) => qc.invalidateQueries({ queryKey: [k] }));
     setEvents((l) => [{ ...ev, id: Date.now() + Math.random(), read: false }, ...l].slice(0, 25));
     toast.push({ tone: 'info', title: titles[ev.type] ?? 'Update', message: ev.message });
   }, [qc, toast]);

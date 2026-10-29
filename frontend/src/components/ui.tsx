@@ -156,7 +156,7 @@ export function Async<T>({ query, skeleton, children }: { query: UseQueryResult<
   return <>{children(query.data)}</>;
 }
 
-export function Modal({ open, onClose, title, children, footer }: { open: boolean; onClose: () => void; title: string; children: ReactNode; footer?: ReactNode }) {
+export function Modal({ open, onClose, title, children, footer, size = 'md' }: { open: boolean; onClose: () => void; title: string; children: ReactNode; footer?: ReactNode; size?: 'md' | 'xl' }) {
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
@@ -167,7 +167,7 @@ export function Modal({ open, onClose, title, children, footer }: { open: boolea
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-slate-900/50 backdrop-blur-sm" onClick={onClose} />
-      <div role="dialog" aria-modal="true" className="relative z-10 flex max-h-[85vh] w-full max-w-lg animate-fade-in flex-col rounded-2xl border border-slate-200 bg-white shadow-2xl dark:border-white/10 dark:bg-ink-800">
+      <div role="dialog" aria-modal="true" className={cn('relative z-10 flex max-h-[85vh] w-full animate-fade-in flex-col', size === 'xl' ? 'max-w-4xl' : 'max-w-lg', ' rounded-2xl border border-slate-200 bg-white shadow-2xl dark:border-white/10 dark:bg-ink-800')}>
         <div className="flex items-center justify-between border-b border-slate-100 px-5 py-4 dark:border-white/10">
           <h3 className="font-semibold text-slate-900 dark:text-white">{title}</h3>
           <button onClick={onClose} aria-label="Close" className="rounded-lg p-1 text-slate-400 hover:bg-slate-100 hover:text-slate-600 dark:hover:bg-white/10"><X className="h-5 w-5" /></button>

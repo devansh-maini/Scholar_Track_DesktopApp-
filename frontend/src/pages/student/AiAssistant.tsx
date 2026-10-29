@@ -2,17 +2,30 @@ import { useQueryClient } from '@tanstack/react-query';
 import { Eye, Send, Sparkles, Trash2, TriangleAlert } from 'lucide-react';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { Button, Card, Modal, PageHeader, cn } from '../../components/ui';
+import { useAuth } from '../../state/auth';
 import { api, ApiError } from '../../lib/api';
 import { keys, useAiHistory } from '../../lib/queries';
 import type { AiReply, HistoryItem } from '../../lib/types';
 import { useToast } from '../../state/toast';
 
-const suggestions = [
+const studentSuggestions = [
   'Which subjects should I focus on?',
   'Why is my performance falling?',
   'Summarize my midterm marks',
   'Create a study plan from my current academic status',
   'How many classes do I need to reach 75% attendance?',
+];
+const teacherSuggestions = [
+  'Which of my students need the most attention?',
+  'Summarize my classes\u2019 attendance',
+  'Which subject has the weakest marks?',
+  'Suggest how to support students below 75% attendance',
+];
+const hodSuggestions = [
+  'Summarize the department\u2019s performance',
+  'Which classes or subjects are weakest?',
+  'How many students are at high risk and why?',
+  'What should I discuss in the next faculty meeting?',
 ];
 
 interface Msg { id: string; sender: 'USER' | 'ASSISTANT'; content: string; error?: boolean }
@@ -57,6 +70,10 @@ function RichText({ text }: { text: string }) {
 }
 
 export default function AiAssistant() {
+  const { user } = useAuth();
+  const role = user?.role ?? 'STUDENT';
+  const suggestions = role === 'HOD' ? hodSuggestions : role === 'TEACHER' ? teacherSuggestions : studentSuggestions;
+  const scope = role === 'HOD' ? 'your department' : role === 'TEACHER' ? 'your classes' : 'your own performance';
   const history = useAiHistory();
   const qc = useQueryClient();
   const toast = useToast();
@@ -111,7 +128,7 @@ export default function AiAssistant() {
 
   return (
     <div className="flex h-[calc(100vh-9.5rem)] flex-col">
-      <PageHeader title="AI Assistant" subtitle="Ask about your own performance. Answers use only your authorised data; official numbers are never changed by the AI."
+      <PageHeader title="AI Assistant" subtitle={`Ask about ${scope}. Answers use only data you are authorised to see; official numbers are never changed by the AI.`}
         actions={<><Button variant="secondary" size="sm" icon={Eye} onClick={() => void showContext()}>What can the AI see?</Button>
           <Button variant="ghost" size="sm" icon={Trash2} onClick={() => void clear()} disabled={msgs.length === 0}>Clear</Button></>} />
       <Card className="flex min-h-0 flex-1 flex-col !p-0">
@@ -146,13 +163,13 @@ export default function AiAssistant() {
           <div ref={bottom} />
         </div>
         <form onSubmit={(e) => { e.preventDefault(); void send(input); }} className="flex gap-3 border-t border-slate-100 p-4 dark:border-white/5">
-          <input className="input" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Ask about your marks, attendance or study plan…" maxLength={1000} disabled={busy} />
+          <input className="input" value={input} onChange={(e) => setInput(e.target.value)} placeholder={role === 'STUDENT' ? 'Ask about your marks, attendance or study plan…' : 'Ask about performance, attendance or risk…'} maxLength={1000} disabled={busy} />
           <Button type="submit" icon={Send} loading={busy} disabled={input.trim().length === 0}>Send</Button>
         </form>
       </Card>
 
       <Modal open={ctxOpen} onClose={() => setCtxOpen(false)} title="Exactly what the AI receives about you" footer={<Button variant="secondary" onClick={() => setCtxOpen(false)}>Close</Button>}>
-        <p className="mb-3 text-sm text-slate-500">The server prepares this text from your own records and sends only this to the AI. It never includes passwords, other students, or anything outside your role.</p>
+        <p className="mb-3 text-sm text-slate-500">The server prepares this text from the records your role may see and sends only this to the AI. It never includes passwords or anything outside your role.</p>
         {ctx === null ? <p className="text-sm text-slate-400">Loading…</p> : <pre className="max-h-96 overflow-auto whitespace-pre-wrap rounded-xl bg-slate-100 p-4 text-xs dark:bg-white/5">{ctx}</pre>}
       </Modal>
     </div>

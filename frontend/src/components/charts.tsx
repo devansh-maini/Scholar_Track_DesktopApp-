@@ -54,3 +54,39 @@ export function SgpaTrend({ data }: { data: { label: string; sgpa: number }[] })
     </ResponsiveContainer>
   );
 }
+
+/** Generic bar chart for one metric across categories (semesters, classes, subjects…). */
+export function ValueBars({ data, max = 100, unit = '%', reference, colorFn, label = 'Value', height = 230 }: {
+  data: { name: string; value: number }[]; max?: number; unit?: string; reference?: number; colorFn?: (v: number) => string; label?: string; height?: number;
+}) {
+  return (
+    <ResponsiveContainer width="100%" height={height}>
+      <BarChart data={data} margin={{ top: 8, right: 8, left: -18, bottom: 0 }} barSize={28}>
+        <CartesianGrid stroke={GRID} vertical={false} />
+        <XAxis dataKey="name" tick={{ fill: AXIS, fontSize: 12 }} axisLine={false} tickLine={false} interval={0} />
+        <YAxis domain={[0, max]} tick={{ fill: AXIS, fontSize: 12 }} axisLine={false} tickLine={false} />
+        <Tooltip contentStyle={TOOLTIP} cursor={{ fill: 'rgba(148,163,184,.12)' }} formatter={(v) => [`${Number(v).toFixed(unit === '%' ? 1 : 2)}${unit === '%' ? '%' : ''}`, label]} />
+        {reference !== undefined && <ReferenceLine y={reference} stroke="#f59e0b" strokeDasharray="4 4" />}
+        <Bar dataKey="value" radius={[8, 8, 0, 0]}>
+          {data.map((d) => <Cell key={d.name} fill={colorFn ? colorFn(d.value) : '#10a595'} />)}
+        </Bar>
+      </BarChart>
+    </ResponsiveContainer>
+  );
+}
+
+/** Simple line chart (e.g. daily attendance percentage). */
+export function TrendLine({ data, max = 100, label = 'Value', unit = '%' }: { data: { label: string; value: number }[]; max?: number; label?: string; unit?: string }) {
+  return (
+    <ResponsiveContainer width="100%" height={230}>
+      <LineChart data={data} margin={{ top: 8, right: 12, left: -18, bottom: 0 }}>
+        <CartesianGrid stroke={GRID} vertical={false} />
+        <XAxis dataKey="label" tick={{ fill: AXIS, fontSize: 11 }} axisLine={false} tickLine={false} minTickGap={24} />
+        <YAxis domain={[0, max]} tick={{ fill: AXIS, fontSize: 12 }} axisLine={false} tickLine={false} />
+        <Tooltip contentStyle={TOOLTIP} formatter={(v) => [`${Number(v).toFixed(1)}${unit}`, label]} />
+        <ReferenceLine y={75} stroke="#f59e0b" strokeDasharray="4 4" />
+        <Line type="monotone" dataKey="value" stroke="#10a595" strokeWidth={3} dot={false} activeDot={{ r: 5 }} />
+      </LineChart>
+    </ResponsiveContainer>
+  );
+}
